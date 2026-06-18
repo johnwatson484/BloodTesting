@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BloodTesting.Adapters.EfSqlite/BloodTesting.Adapters.EfSqlite.csproj" />
+  <Project Path="BloodTesting.Adapters.FakeBloodTest/BloodTesting.Adapters.FakeBloodTest.csproj" />
+  <Project Path="BloodTesting.Api/BloodTesting.Api.csproj" />
+  <Project Path="BloodTesting.Application/BloodTesting.Application.csproj" />
+  <Project Path="BloodTesting.Domain/BloodTesting.Domain.csproj" />
+  <Project Path="BloodTesting.Tests/BloodTesting.Tests.csproj" />
+</Solution>
