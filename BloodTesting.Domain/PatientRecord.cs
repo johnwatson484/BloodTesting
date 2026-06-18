@@ -1,0 +1,28 @@
+namespace BloodTesting.Domain;
+
+public class PatientRecord
+{
+    public PatientRecord(Patient patient)
+    {
+        Patient = patient;
+    }
+
+    public PatientRecord(Patient patient, List<BloodTest> bloodTests)
+    {
+        Patient = patient;
+        BloodTests = bloodTests;
+    }
+
+    public Patient Patient { get; private set; }
+    public List<BloodTest> BloodTests { get; private set; } = [];
+
+    public void AddBloodTest(BloodTest bloodTest)
+    {
+        if(BloodTests.Any(b => b.Id == bloodTest.Id))
+        {
+            throw new InvalidOperationException("This blood test is already added to the patient record.");
+        }
+
+        BloodTests.Add(bloodTest);
+    }
+}
