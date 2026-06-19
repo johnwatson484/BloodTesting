@@ -1,6 +1,6 @@
-namespace BloodTesting.Domain;
+namespace BloodTesting.Domain.Patients;
 
-public class Patient
+public sealed class Patient
 {
     public Patient(int id, string name, DateTime dateOfBirth)
     {

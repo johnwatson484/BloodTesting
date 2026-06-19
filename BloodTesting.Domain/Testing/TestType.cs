@@ -1,4 +1,4 @@
-namespace BloodTesting.Domain;
+namespace BloodTesting.Domain.Testing;
 
 public enum TestType
 {

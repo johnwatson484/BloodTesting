@@ -1,6 +1,8 @@
-namespace BloodTesting.Domain;
+using BloodTesting.Domain.Patients;
 
-public class BloodTest
+namespace BloodTesting.Domain.Testing;
+
+public sealed class BloodTest
 {
     public BloodTest(int id, Patient patient, DateTime testDate, TestType testType, TestPriority testPriority)
     {
@@ -16,7 +18,13 @@ public class BloodTest
     public DateTime TestDate { get; private set; }
     public TestType Type { get; private set; }
     public TestPriority Priority { get; private set; }
+    public TestStatus Status { get; private set; } = TestStatus.Pending;
     public TestResult? Result { get; private set; } = null;
+
+    public void SetStatus(TestStatus status)
+    {
+        Status = status;
+    }
 
     public void SetResult(TestResult result)
     {

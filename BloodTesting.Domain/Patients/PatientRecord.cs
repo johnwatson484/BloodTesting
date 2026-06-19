@@ -1,6 +1,8 @@
-namespace BloodTesting.Domain;
+using BloodTesting.Domain.Testing;
 
-public class PatientRecord
+namespace BloodTesting.Domain.Patients;
+
+public sealed class PatientRecord
 {
     public PatientRecord(Patient patient)
     {
