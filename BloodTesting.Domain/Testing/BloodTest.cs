@@ -4,7 +4,7 @@ namespace BloodTesting.Domain.Testing;
 
 public sealed class BloodTest
 {
-    public BloodTest(int id, Patient patient, DateTime testDate, TestType testType, TestPriority testPriority)
+    public BloodTest(Guid id, Patient patient, DateTime testDate, TestType testType, TestPriority testPriority)
     {
         Id = id;
         Patient = patient;
@@ -13,7 +13,7 @@ public sealed class BloodTest
         Priority = testPriority;
     }
 
-    public int Id { get; private set; }
+    public Guid Id { get; private set; }
     public Patient Patient { get; private set; }
     public DateTime TestDate { get; private set; }
     public TestType Type { get; private set; }
