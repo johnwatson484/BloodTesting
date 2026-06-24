@@ -4,7 +4,7 @@ namespace BloodTesting.Adapters.InMemoryQueue.Processing;
 
 public sealed class ProcessingQueue
 {
-    private readonly PriorityQueue<BloodTest, (TestPriority Priority, DateTime TestDate)> queue = new(
+    private readonly PriorityQueue<BloodTest, (TestPriority Priority, DateTime TestDate)> _queue = new(
         Comparer<(TestPriority Priority, DateTime TestDate)>.Create((x, y) =>
         {
             int priorityComparison = y.Priority.CompareTo(x.Priority);
@@ -18,11 +18,11 @@ public sealed class ProcessingQueue
 
     public async Task Enqueue(BloodTest test)
     {
-        queue.Enqueue(test, (test.Priority, test.TestDate));
+        _queue.Enqueue(test, (test.Priority, test.TestDate));
     }
 
     public async Task<BloodTest?> TryDequeue()
     {
-        return queue.TryDequeue(out var test, out _) ? test : null;
+        return _queue.TryDequeue(out var test, out _) ? test : null;
     }
 }
