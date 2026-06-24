@@ -2,6 +2,8 @@ namespace BloodTesting.Domain.Patients;
 
 public sealed class Patient
 {
+    public Patient() {}
+
     public Patient(Guid id, string name, DateTime dateOfBirth)
     {
         Id = id;

@@ -4,6 +4,8 @@ namespace BloodTesting.Domain.Testing;
 
 public sealed class BloodTest
 {
+    public BloodTest() {}
+
     public BloodTest(Guid id, Patient patient, DateTime testDate, TestType testType, TestPriority testPriority)
     {
         Id = id;

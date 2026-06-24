@@ -4,6 +4,8 @@ namespace BloodTesting.Domain.Patients;
 
 public sealed class PatientRecord
 {
+    public PatientRecord() {}
+
     public PatientRecord(Patient patient)
     {
         Patient = patient;
