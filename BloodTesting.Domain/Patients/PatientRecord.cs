@@ -8,15 +8,18 @@ public sealed class PatientRecord
 
     public PatientRecord(Patient patient)
     {
+        Id = patient.Id;
         Patient = patient;
     }
 
     public PatientRecord(Patient patient, List<BloodTest> bloodTests)
     {
+        Id = patient.Id;
         Patient = patient;
         BloodTests = bloodTests;
     }
 
+    public Guid Id { get; private set; }
     public Patient Patient { get; private set; }
     public List<BloodTest> BloodTests { get; private set; } = [];
 
